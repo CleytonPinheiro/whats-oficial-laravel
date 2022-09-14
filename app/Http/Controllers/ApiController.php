@@ -8,14 +8,14 @@ use Illuminate\Http\Request;
 class ApiController extends Controller
 {
     public function index(Request $req) {
-
         $data=$req->all();
 
         $dataToString = json_encode($data);
         
         Webhook::create(['webhook' => $dataToString, 'type' => 'GET']);
+
         return $data['hub_challenge'];
-    }
+}
 
     public function store(Request $req) {
         $data=$req->all();
@@ -24,7 +24,7 @@ class ApiController extends Controller
 
         $dataToString = json_encode($data);
         
-        Webhook::create(['webhook' => $dataToString, 'type' => $request_type]);
+        return Webhook::create(['webhook' => $dataToString, 'type' => $request_type]);
     }
 }
 

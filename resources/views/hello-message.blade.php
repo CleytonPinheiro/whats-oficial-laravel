@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
+    <h1> AGUARDE. Em breve a Channel chega para lhe ajudar.
+        GAEL
+    </h1>
     
 </body>
 </html>

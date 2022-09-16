@@ -12,7 +12,7 @@ class ApiController extends Controller
 
         $dataToString = json_encode($data);
         
-        Webhook::create(['webhook' => $dataToString, 'type' => 'GET']);
+        Webhook::create(['webhook' => $dataToString, 'type' => 'GET']);        
 
         return $data['hub_challenge'];
 }
@@ -27,4 +27,3 @@ class ApiController extends Controller
         return Webhook::create(['webhook' => $dataToString, 'type' => $request_type]);
     }
 }
-

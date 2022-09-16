@@ -19,6 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/whatsapp', [ApiController::class, 'index']);
+Route::get('/webhook', [ApiController::class, 'index']);
 
-Route::post('/whatsapp', [ApiController::class, 'store']);
+Route::post('/webhook', [ApiController::class, 'store']);
